@@ -1,0 +1,21 @@
+{
+  "identifier": "org.netwrk.actionlint",
+  "name": "Actionlint",
+  "organization": "Netwrk",
+  "description": "Uses actionlint for static analysis of github actions",
+  "repository": "https://github.com/jbergstroem/nova-actionlint",
+  "bugs": "https://github.com/jbergstroem/nova-actionlint/issues",
+  "license": "MIT",
+  "version": "0.0.1",
+  "categories": ["issues"],
+  "main": "main.js",
+
+  "activationEvents": [
+    "onLanguage:yaml",
+    "onWorkspaceContains:.github/workflows/*"
+  ],
+
+  "entitlements": {
+    "process": true
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "nova-actionlint",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/main.ts",
+  "author": "Johan Bergström <bugs@bergstroem.nu>",
+  "bugs": {
+    "url": "https://github.com/jbergstroem/nova-actionlint/issues"
+  },
+  "scripts": {
+    "build": "esbuild --bundle --format=cjs --outfile=actionlint.novaextension/Scripts/main.js src/main.ts"
+  },
+  "keywords": ["nov"],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/nova-editor-node": "^4.1.5",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "esbuild": "^0.15.10",
+    "eslint": "^8.24.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-nova": "^1.7.0",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  },
+  "eslintConfig": {
+    "env": {
+      "nova/nova": true
+    },
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "nova",
+      "@typescript-eslint"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:@typescript-eslint/recommended"
+    ]
+  },
+  "eslintIgnore": [
+    "actionlint.novaextension/Scripts/*"
+  ]
+}

@@ -1,3 +1,7 @@
+<p align="center">
+  <img width="450" src="https://raw.githubusercontent.com/jbergstroem/nova-actionlint/main/actionlint.novaextension/logo.png">
+</p>
+
 **nova-actionlint** automatically lints all github actions, then reports errors and warnings in Nova's **Issues** sidebar and the editor gutter.
 
 ![A screenshot of Actionlint output from the actionlint test repository](https://raw.githubusercontent.com/jbergstroem/nova-actionlint/main/actionlint.novaextension/screenshot.png)
@@ -6,7 +10,7 @@
 
 nova-actionlint requires [actionlint][actionlint] to be available in your `$PATH`. The easiest way to do so is by using [Homebrew][brew]:
 
-```bash
+```shell
 $ brew install actionlint
 ```
 

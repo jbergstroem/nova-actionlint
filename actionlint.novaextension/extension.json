@@ -9,13 +9,24 @@
   "version": "1.0",
   "categories": ["issues"],
   "main": "main.js",
-
   "activationEvents": [
     "onLanguage:yaml",
     "onWorkspaceContains:.github/workflows/*"
   ],
-
   "entitlements": {
     "process": true
-  }
+  },
+  "config": [
+    {
+      "key": "actionlint.searchpath",
+      "title": "Search path",
+      "description": "Workspace folders to look in when invoking Actionlint. If you store files outside of the default (.github/workflows), add those paths here.",
+      "type": "pathArray",
+      "allowFiles": true,
+      "allowFolders": true,
+      "relative": true,
+      "required": true,
+      "default": [".github/workflows"]
+    }
+  ]
 }

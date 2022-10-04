@@ -89,12 +89,14 @@ export const activate = (): void => {
       const request = new NotificationRequest("actionlint-not-found");
 
       request.title = nova.localize("Actionlint not found");
-      request.body = nova.localize("Couldn't locate the actionlint binary. Check $PATH and try again.");
+      request.body = nova.localize(
+        "Couldn't locate the actionlint binary. Check $PATH and try again."
+      );
 
       nova.notifications.add(request);
     }
   });
-  process.start()
+  process.start();
 };
 
 export const deactivate = (): void => {

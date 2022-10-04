@@ -10,7 +10,9 @@
   "scripts": {
     "build": "esbuild --bundle --format=cjs --outfile=actionlint.novaextension/Scripts/main.js src/main.ts"
   },
-  "keywords": ["nov"],
+  "keywords": [
+    "nov"
+  ],
   "license": "MIT",
   "devDependencies": {
     "@types/nova-editor-node": "^4.1.5",

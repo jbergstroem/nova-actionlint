@@ -47,7 +47,7 @@ class IssuesProvider {
       }
     });
 
-    return process.then(function (stdout) {
+    return process.then((stdout) => {
       return JSON.parse(stdout).map(function (
         data: ActionlintOutput,
         i: number
@@ -73,10 +73,28 @@ class IssuesProvider {
 let registration: Disposable | null = null;
 
 export const activate = (): void => {
-  registration = nova.assistants.registerIssueAssistant(
-    { syntax: "yaml" },
-    new IssuesProvider()
-  );
+  const process = new Process("command", {
+    shell: true,
+    stdio: "ignore",
+    args: ["-v", "actionlint"],
+  });
+
+  process.onDidExit((status) => {
+    if (status === 0) {
+      registration = nova.assistants.registerIssueAssistant(
+        { syntax: "yaml" },
+        new IssuesProvider()
+      );
+    } else {
+      const request = new NotificationRequest("actionlint-not-found");
+
+      request.title = nova.localize("Actionlint not found");
+      request.body = nova.localize("Couldn't locate the actionlint binary. Check $PATH and try again.");
+
+      nova.notifications.add(request);
+    }
+  });
+  process.start()
 };
 
 export const deactivate = (): void => {

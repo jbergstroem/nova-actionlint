@@ -2,8 +2,8 @@ name: lint
 on:
   pull_request:
     paths:
-      - '.github/workflows/lint.yml'
-      - '.github/renovate.json'
+      - ".github/workflows/lint.yml"
+      - ".github/renovate.json"
 
 jobs:
   validate-renovate-config:
@@ -14,4 +14,4 @@ jobs:
       - name: validate
         uses: rinchsan/renovate-config-validator@v0.0.11
         with:
-          pattern: '.github/renovate.json'
+          pattern: ".github/renovate.json"

@@ -6,7 +6,7 @@
   "repository": "https://github.com/jbergstroem/nova-actionlint",
   "bugs": "https://github.com/jbergstroem/nova-actionlint/issues",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "1.0",
   "categories": ["issues"],
   "main": "main.js",
 

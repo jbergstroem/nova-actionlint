@@ -1,6 +1,6 @@
 {
   "name": "nova-actionlint",
-  "version": "0.0.1",
+  "version": "1.0",
   "description": "",
   "main": "src/main.ts",
   "author": "Johan Bergström <bugs@bergstroem.nu>",
@@ -10,9 +10,6 @@
   "scripts": {
     "build": "esbuild --bundle --format=cjs --outfile=actionlint.novaextension/Scripts/main.js src/main.ts"
   },
-  "keywords": [
-    "nov"
-  ],
   "license": "MIT",
   "devDependencies": {
     "@types/nova-editor-node": "^4.1.5",

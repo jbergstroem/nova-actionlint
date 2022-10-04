@@ -1,0 +1,17 @@
+name: lint
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/lint-renovate.yml'
+      - '.github/renovate.json'
+
+jobs:
+  validate-renovate-config:
+    name: validate renovate config
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v3.1.0
+      - name: validate
+        uses: rinchsan/renovate-config-validator@v0.0.11
+        with:
+          pattern: '.github/renovate.json'

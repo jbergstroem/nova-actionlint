@@ -25,7 +25,7 @@ will be saved alongside your workspace.
 
 ## Acknowledgements
 
-The extension more or less is a fork of [shellcheck for Nova][nova-shellcheck]. If you appreciate and use this extension you can
+Parts of `src/main.ts` is from [shellcheck for Nova][nova-shellcheck]. If you appreciate and use this extension you can
 [buy him a coffee][olly-coffee].
 
 [actionlint]: https://github.com/rhysd/actionlint

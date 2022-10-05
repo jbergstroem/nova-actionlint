@@ -1,9 +1,6 @@
 name: lint
 on:
   pull_request:
-    paths:
-      - ".github/workflows/lint.yml"
-      - ".github/renovate.json"
 
 jobs:
   validate-renovate-config:
@@ -15,3 +12,43 @@ jobs:
         uses: rinchsan/renovate-config-validator@v0.0.11
         with:
           pattern: ".github/renovate.json"
+  eslint:
+    name: run eslint, prettier
+    runs-on: ubuntu-22.04
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3.1.0
+
+      - name: install node
+        uses: actions/setup-node@v3.5.0
+        with:
+          node-version: 18
+
+      - uses: pnpm/action-setup@v2.2.2
+        name: install pnpm
+        id: pnpm-install
+        with:
+          run_install: false
+          version: 7
+
+      - name: get cache directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - uses: actions/cache@v3.0.10
+        name: set up cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: install deps
+        run: pnpm install
+
+      - name: run eslint
+        run: node_modules/.bin/eslint --quiet .
+
+      - name: run pretter
+        run: node_modules/.bin/prettier -c .

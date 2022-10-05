@@ -1,0 +1,6 @@
+{
+  "index.ignored_file_patterns": ["node_modules"],
+  "workspace.art_style": 1,
+  "workspace.color": 8,
+  "workspace.name": "Actionlint for Nova"
+}

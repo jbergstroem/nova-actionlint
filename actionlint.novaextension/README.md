@@ -1,5 +1,6 @@
 <p align="center">
-  <img width="450" src="https://raw.githubusercontent.com/jbergstroem/nova-actionlint/main/actionlint.novaextension/logo.png">
+  <a href="#gh-light-mode-only"><img width="450" src="https://raw.githubusercontent.com/jbergstroem/nova-actionlint/main/actionlint.novaextension/logo-light-mode.png"></a>
+  <a href="#gh-dark-mode-only"<img width="450" src="https://raw.githubusercontent.com/jbergstroem/nova-actionlint/main/actionlint.novaextension/logo-dark-mode.png"></a>
 </p>
 
 **nova-actionlint** automatically lints all github actions, then reports errors and warnings in Nova's **Issues** sidebar and the editor gutter.
@@ -25,7 +26,7 @@ will be saved alongside your workspace.
 
 ## Acknowledgements
 
-Parts of `src/main.ts` is from [shellcheck for Nova][nova-shellcheck]. If you appreciate and use this extension you can
+Parts of `src/main.ts` are from [shellcheck for Nova][nova-shellcheck]. If you appreciate and use this extension you can
 [buy him a coffee][olly-coffee].
 
 [actionlint]: https://github.com/rhysd/actionlint

@@ -4,12 +4,15 @@
 
   "compilerOptions": {
     "target": "es6",
-    "module": "ES2020",
-    "moduleResolution": "node",
     "newLine": "lf",
+    "format": "cjs",
+    "bundle": true,
     "strict": true,
     "noEmitOnError": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": ["src"]
 }

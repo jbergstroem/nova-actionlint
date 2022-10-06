@@ -9,15 +9,16 @@ type ActionlintOutput = {
 
 class IssuesProvider {
   provideIssues(editor: TextEditor): AssistantArray<Issue> {
-    const relativePath: string = editor.document.path.replace(
-      nova.workspace.path,
-      ""
-    );
+    let relativePath: string = editor.document.path || "";
+    if (editor.document.path !== null && nova.workspace.path !== null) {
+      relativePath = editor.document.path.replace(nova.workspace.path, "");
+    }
     console.info(`Evaluating: ${editor.document.uri}`);
-    const path: string[] = nova.config.get("actionlint.searchpath", "array");
+    const path: string[] =
+      nova.config.get("actionlint.searchpath", "array") ?? [];
     if (!path.find((element) => relativePath.includes(element))) {
       console.info(`Skipping: ${relativePath} - doesn't match config path`);
-      return;
+      return [];
     }
 
     const documentLength = editor.document.length;

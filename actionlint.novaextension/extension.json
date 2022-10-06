@@ -27,6 +27,14 @@
       "relative": true,
       "required": true,
       "default": [".github/workflows"]
+    },
+    {
+      "key": "actionlint.binarypath",
+      "title": "Actionlint path",
+      "description": "Absolute path to the actionlint binary. Useful if you cannot make it available in $PATH.",
+      "type": "path",
+      "allowFiles": true,
+      "required": false
     }
   ]
 }

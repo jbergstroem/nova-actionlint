@@ -27,7 +27,9 @@ class IssuesProvider {
     );
 
     const process: Promise<string> = new Promise((resolve) => {
-      const process = new Process("actionlint", {
+      const binary: string =
+        nova.config.get("actionlint.binarypath", "string") ?? "actionlint";
+      const process = new Process(binary, {
         shell: true,
         args: ["-format", "{{json .}}", "-"],
       });
@@ -83,10 +85,12 @@ class IssuesProvider {
 let registration: Disposable | null = null;
 
 export const activate = (): void => {
+  const binary: string =
+    nova.config.get("actionlint.binarypath", "string") ?? "actionlint";
   const process = new Process("command", {
     shell: true,
     stdio: "ignore",
-    args: ["-v", "actionlint"],
+    args: ["-v", binary],
   });
 
   process.onDidExit((status) => {

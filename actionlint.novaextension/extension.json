@@ -2,7 +2,7 @@
   "identifier": "org.netwrk.actionlint",
   "name": "Actionlint",
   "organization": "Netwrk",
-  "description": "Uses actionlint for static analysis of github actions",
+  "description": "Use Actionlint for static analysis of Github Actions",
   "repository": "https://github.com/jbergstroem/nova-actionlint",
   "bugs": "https://github.com/jbergstroem/nova-actionlint/issues",
   "license": "MIT",

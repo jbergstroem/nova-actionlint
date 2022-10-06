@@ -1,3 +1,7 @@
+## Version 1.1.1
+
+Fix a broken image reference in readme.
+
 ## Version 1.1
 
 You can now control which paths you want to run Actionlint in. By default, it will only look inside

@@ -6,7 +6,7 @@
   "repository": "https://github.com/jbergstroem/nova-actionlint",
   "bugs": "https://github.com/jbergstroem/nova-actionlint/issues",
   "license": "MIT",
-  "version": "1.1",
+  "version": "1.1.1",
   "categories": ["issues"],
   "main": "main.js",
   "activationEvents": [

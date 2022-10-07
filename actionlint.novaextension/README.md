@@ -1,6 +1,6 @@
 <p align="center">
   <a href="#gh-light-mode-only"><img width="450" src="https://raw.githubusercontent.com/jbergstroem/nova-actionlint/main/actionlint.novaextension/logo-light-mode.png"></a>
-  <a href="#gh-dark-mode-only"<img width="450" src="https://raw.githubusercontent.com/jbergstroem/nova-actionlint/main/actionlint.novaextension/logo-dark-mode.png"></a>
+  <a href="#gh-dark-mode-only"><img width="450" src="https://raw.githubusercontent.com/jbergstroem/nova-actionlint/main/actionlint.novaextension/logo-dark-mode.png"></a>
 </p>
 
 **nova-actionlint** automatically lints all github actions, then reports errors and warnings in Nova's **Issues** sidebar and the editor gutter.

@@ -1,3 +1,5 @@
+import { cleanPath } from "nova-extension-utils";
+
 type ActionlintOutput = {
   message: string;
   kind: string;
@@ -9,11 +11,8 @@ type ActionlintOutput = {
 
 class IssuesProvider {
   provideIssues(editor: TextEditor): AssistantArray<Issue> {
-    let relativePath: string = editor.document.path || "";
-    if (editor.document.path !== null && nova.workspace.path !== null) {
-      relativePath = editor.document.path.replace(nova.workspace.path, "");
-    }
-    console.info(`Evaluating: ${editor.document.uri}`);
+    let relativePath = cleanPath(editor.document.uri)
+    console.info(`Evaluating: ${relativePath}`);
     const path: string[] =
       nova.config.get("actionlint.searchpath", "array") ?? [];
     if (!path.find((element) => relativePath.includes(element))) {

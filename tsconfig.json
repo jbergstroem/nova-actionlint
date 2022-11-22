@@ -1,18 +1,16 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Nova",
-
   "compilerOptions": {
     "target": "es6",
-    "newLine": "lf",
-    "format": "cjs",
     "bundle": true,
     "strict": true,
     "noEmitOnError": true,
     "skipLibCheck": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution":"node"
   },
   "include": ["src"]
 }

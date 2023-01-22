@@ -12,16 +12,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/nova-editor-node": "4.1.8",
-    "@typescript-eslint/eslint-plugin": "5.43.0",
-    "@typescript-eslint/parser": "5.43.0",
-    "esbuild": "0.15.14",
-    "eslint": "8.27.0",
-    "eslint-config-prettier": "8.5.0",
+    "@types/nova-editor-node": "4.1.10",
+    "@typescript-eslint/eslint-plugin": "5.48.2",
+    "@typescript-eslint/parser": "5.48.2",
+    "esbuild": "0.17.4",
+    "eslint": "8.32.0",
+    "eslint-config-prettier": "8.6.0",
     "eslint-plugin-nova": "1.7.0",
     "nova-extension-utils": "^1.4.0",
-    "prettier": "2.7.1",
-    "typescript": "4.9.3"
+    "prettier": "2.8.3",
+    "typescript": "4.9.4"
   },
   "eslintConfig": {
     "env": {

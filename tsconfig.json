@@ -10,7 +10,7 @@
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution":"node"
+    "moduleResolution": "node"
   },
   "include": ["src"]
 }

@@ -11,7 +11,7 @@ type ActionlintOutput = {
 
 class IssuesProvider {
   provideIssues(editor: TextEditor): AssistantArray<Issue> {
-    let relativePath = cleanPath(editor.document.uri)
+    let relativePath = cleanPath(editor.document.uri);
     console.info(`Evaluating: ${relativePath}`);
     const path: string[] =
       nova.config.get("actionlint.searchpath", "array") ?? [];

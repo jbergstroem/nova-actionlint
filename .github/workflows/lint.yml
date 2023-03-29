@@ -7,7 +7,7 @@ jobs:
     name: validate renovate config
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3.3.0
+      - uses: actions/checkout@v3.5.0
       - name: validate
         uses: rinchsan/renovate-config-validator@v0.0.12
         with:
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: checkout
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v3.5.0
 
       - name: install node
         uses: actions/setup-node@v3.6.0
@@ -35,7 +35,7 @@ jobs:
         id: pnpm-cache
         run: echo "STORE_PATH=$(pnpm store path)" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/cache@v3.2.3
+      - uses: actions/cache@v3.3.1
         name: set up cache
         with:
           path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}

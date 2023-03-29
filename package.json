@@ -13,15 +13,15 @@
   "license": "MIT",
   "devDependencies": {
     "@types/nova-editor-node": "4.1.10",
-    "@typescript-eslint/eslint-plugin": "5.48.2",
-    "@typescript-eslint/parser": "5.48.2",
-    "esbuild": "0.17.4",
-    "eslint": "8.32.0",
-    "eslint-config-prettier": "8.6.0",
+    "@typescript-eslint/eslint-plugin": "5.57.0",
+    "@typescript-eslint/parser": "5.57.0",
+    "esbuild": "0.17.14",
+    "eslint": "8.37.0",
+    "eslint-config-prettier": "8.8.0",
     "eslint-plugin-nova": "1.7.0",
     "nova-extension-utils": "^1.4.0",
-    "prettier": "2.8.3",
-    "typescript": "4.9.4"
+    "prettier": "2.8.7",
+    "typescript": "4.9.5"
   },
   "eslintConfig": {
     "env": {

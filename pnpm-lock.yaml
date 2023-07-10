@@ -6,8 +6,8 @@ settings:
 
 devDependencies:
   '@types/nova-editor-node':
-    specifier: 4.1.10
-    version: 4.1.10
+    specifier: 5.1.0
+    version: 5.1.0
   '@typescript-eslint/eslint-plugin':
     specifier: 5.61.0
     version: 5.61.0(@typescript-eslint/parser@5.61.0)(eslint@8.44.0)(typescript@5.1.6)
@@ -323,8 +323,8 @@ packages:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
 
-  /@types/nova-editor-node@4.1.10:
-    resolution: {integrity: sha512-gjYb60LHk1Yy2zt92uzZPo6+pFhSZi3DRnB/HChfyHWgxwGVugW8rUROX0rEJesbNjLG08Eakejl8krZnwJkHQ==}
+  /@types/nova-editor-node@5.1.0:
+    resolution: {integrity: sha512-Jj8wnUGOYmmNgd61JHSG0kV5o/zlthVn92qCdLz6VYa7CM4KSmwPjCeCzw2JqjJw6QONpcMXTVH9TKtLCnFf1Q==}
     dev: true
 
   /@types/semver@7.3.12:

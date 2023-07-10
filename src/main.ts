@@ -22,7 +22,7 @@ class IssuesProvider {
 
     const documentLength = editor.document.length;
     const content = editor.document.getTextInRange(
-      new Range(0, documentLength)
+      new Range(0, documentLength),
     );
 
     const process: Promise<string> = new Promise((resolve) => {
@@ -61,7 +61,7 @@ class IssuesProvider {
     return process.then((stdout) => {
       return JSON.parse(stdout).map(function (
         data: ActionlintOutput,
-        i: number
+        i: number,
       ) {
         console.info(`input ${i}: ${data.message}`);
 
@@ -96,14 +96,14 @@ export const activate = (): void => {
     if (status === 0) {
       registration = nova.assistants.registerIssueAssistant(
         { syntax: "yaml" },
-        new IssuesProvider()
+        new IssuesProvider(),
       );
     } else {
       const request = new NotificationRequest("actionlint-not-found");
 
       request.title = nova.localize("Actionlint not found");
       request.body = nova.localize(
-        "Couldn't locate the actionlint binary. Check $PATH and try again."
+        "Couldn't locate the actionlint binary. Check $PATH and try again.",
       );
 
       nova.notifications.add(request);

@@ -29,7 +29,7 @@ jobs:
         id: pnpm-install
         with:
           run_install: false
-          version: 7
+          version: 8
 
       - name: get cache directory
         id: pnpm-cache

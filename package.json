@@ -7,6 +7,10 @@
   "bugs": {
     "url": "https://github.com/jbergstroem/nova-actionlint/issues"
   },
+  "engines": {
+    "node": "=18",
+    "pnpm": ">=8.6"
+  },
   "scripts": {
     "build": "esbuild --bundle --format=cjs --outfile=actionlint.novaextension/Scripts/main.js src/main.ts"
   },
@@ -20,7 +24,7 @@
     "eslint-config-prettier": "8.8.0",
     "eslint-plugin-nova": "1.7.0",
     "nova-extension-utils": "^1.4.0",
-    "prettier": "2.8.7",
+    "prettier": "3.0.0",
     "typescript": "5.0.3"
   },
   "eslintConfig": {
